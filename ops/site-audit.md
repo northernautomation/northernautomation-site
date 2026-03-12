@@ -40,8 +40,9 @@
 - **⚠️ Issue:** This is inconsistent with the homepage which uses `hello@`. Two different addresses for the same business.
 
 **privacy.html (Privacy Policy)**
-- No email address present in the Contact section
-- **⚠️ Issue:** The Contact section has a physical address but no email, leaving visitors with no way to reach Northern Automation with privacy inquiries. This is a compliance gap (PIPEDA / CASL).
+- Contact section now shows: Northern Automation + info@northernautomation.ca
+- ✅ Physical address removed (2026-03-12) — see ops/privacy-audit.md
+- ✅ Email added (2026-03-12) — closes PIPEDA/CASL compliance gap
 
 **hvac-demo.html**
 - No email addresses found.
@@ -94,7 +95,7 @@ Stripe-native emails (receipts, payment confirmations) are controlled by the Str
 |---|-------|----------|----------|
 | 1 | `dave@` is the From address on all automated emails — a personal alias, not a role-based one | n8n workflows | Medium |
 | 2 | Homepage uses `hello@`, Terms uses `info@` — two different public-facing addresses for the same business | index.html vs terms.html | Medium |
-| 3 | Privacy policy has no contact email | privacy.html | High — PIPEDA/CASL compliance gap |
+| 3 | ~~Privacy policy has no contact email~~ | privacy.html | ✅ Fixed 2026-03-12 — added info@, removed physical address |
 | 4 | Stripe receipts have no custom reply-to set | Stripe dashboard | Low |
 | 5 | No `noreply@` or `no-reply@` alias in use — clients could reply to `dave@` and expect a human response to automated emails | n8n workflows | Low-Medium |
 
@@ -130,7 +131,7 @@ That's three addresses, clearly scoped, and routes everything to Dave while look
 2. Change `fromEmail` in NA-ONBOARD-001 from `dave@` → `noreply@northernautomation.ca`
 3. Update body footer links in both emails from `hello@` → `support@northernautomation.ca` (so clients know where to go for help)
 4. Standardize terms.html to use `info@northernautomation.ca` (already there — just keep consistent)
-5. Add email to privacy.html Contact section: `info@northernautomation.ca`
+5. ~~Add email to privacy.html Contact section: `info@northernautomation.ca`~~ ✅ Done 2026-03-12 (also removed physical address)
 6. Set `hello@northernautomation.ca` as reply-to on Stripe receipts in Stripe dashboard
 7. Keep homepage footer as `hello@northernautomation.ca` — correct for public-facing contact
 
@@ -143,7 +144,7 @@ That's three addresses, clearly scoped, and routes everything to Dave while look
 | Homepage footer | `hello@` | ✅ Keep |
 | success.html | `hello@` | Consider `support@` once active |
 | terms.html | `info@` | ✅ Keep, standardize |
-| privacy.html | *(missing)* | Add `info@` |
+| privacy.html | `info@northernautomation.ca` | ✅ Done 2026-03-12 |
 | Welcome email From | `dave@` | Change to `noreply@` |
 | Welcome email body footer | `hello@` | Change to `support@` |
 | Onboarding email From | `dave@` | Change to `noreply@` |
