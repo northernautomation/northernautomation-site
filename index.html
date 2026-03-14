@@ -293,43 +293,13 @@
       color: var(--muted);
       margin-top: 0.25rem;
     }
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    .testimonial {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-    }
-    .testimonial-text {
-      font-size: 0.95rem;
+    .trust-statement {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.05rem;
       color: var(--muted);
       line-height: 1.7;
-      margin-bottom: 1.25rem;
-      font-style: italic;
-    }
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .testimonial-author img {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    .testimonial-name {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-    .testimonial-role {
-      font-size: 0.8rem;
-      color: var(--muted);
     }
 
     /* ── PRICING ── */
@@ -585,7 +555,7 @@
       section { padding: 3.5rem 1.25rem; }
       .pricing-grid { grid-template-columns: 1fr; }
       .stats-bar { gap: 1.5rem; }
-      .testimonials { grid-template-columns: 1fr; }
+      .stats-bar { flex-direction: column; align-items: center; }
       nav { padding: 0 1.25rem; }
       .nav-phone { display: none; }
     }
@@ -673,45 +643,18 @@
         </div>
         <div class="stat">
           <div class="stat-number">24/7</div>
-          <div class="stat-label">Coverage</div>
+          <div class="stat-label">Coverage, 365 Days</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">&lt; 24 Hrs</div>
+          <div class="stat-label">Average Setup</div>
         </div>
         <div class="stat">
           <div class="stat-number">14 Days</div>
-          <div class="stat-label">Free Trial</div>
+          <div class="stat-label">Free Trial — No Credit Card Risk</div>
         </div>
       </div>
-      <div class="testimonials">
-        <div class="testimonial">
-          <p class="testimonial-text">"We were losing after-hours calls every week. Now every call gets answered and I wake up with jobs already booked. Best money I've spent on the business."</p>
-          <div class="testimonial-author">
-            <img src="/images/owner-1.jpg" alt="Mike R." width="44" height="44" loading="lazy">
-            <div>
-              <div class="testimonial-name">Mike R.</div>
-              <div class="testimonial-role">Owner, Northshore Heating &amp; Cooling</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <p class="testimonial-text">"I was skeptical about AI answering my phones. Customers can't tell the difference. It sounds like a real receptionist and it never calls in sick."</p>
-          <div class="testimonial-author">
-            <img src="/images/owner-2.jpg" alt="Sarah K." width="44" height="44" loading="lazy">
-            <div>
-              <div class="testimonial-name">Sarah K.</div>
-              <div class="testimonial-role">Manager, Lakehead Climate Solutions</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <p class="testimonial-text">"Setup took less than a day. I forwarded my number and that was it. Picked up three emergency furnace jobs the first weekend it was running."</p>
-          <div class="testimonial-author">
-            <img src="/images/owner-3.jpg" alt="Dave M." width="44" height="44" loading="lazy">
-            <div>
-              <div class="testimonial-name">Dave M.</div>
-              <div class="testimonial-role">Owner, Superior Comfort HVAC</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p class="trust-statement">Northern Automation is a Thunder Bay company built specifically for Northern Ontario trades businesses. We understand the market because we're in it.</p>
     </div>
   </section>
 
