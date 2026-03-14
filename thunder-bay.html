@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVAC Answering Service Thunder Bay — Northern Automation</title>
+  <meta name="description" content="Thunder Bay's own AI phone answering for HVAC contractors. Never miss a call at -35°C again. 24/7 coverage, 14-day free trial, $197/mo.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://northernautomation.ca/thunder-bay">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://northernautomation.ca/thunder-bay">
+  <meta property="og:title" content="HVAC Answering Service Thunder Bay — Northern Automation">
+  <meta property="og:description" content="Thunder Bay's own AI phone answering for HVAC contractors. Never miss a call at -35°C again.">
+  <meta property="og:site_name" content="Northern Automation">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:image" content="https://northernautomation.ca/images/hero-contractor.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HVAC Answering Service Thunder Bay — Northern Automation">
+  <meta name="twitter:description" content="Thunder Bay's own AI phone answering for HVAC contractors. Never miss a call at -35°C again.">
+  <meta name="twitter:image" content="https://northernautomation.ca/images/hero-contractor.jpg">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #1a1a2e;
+      --bg2:       #16213e;
+      --bg3:       #0f3460;
+      --accent:    #2563eb;
+      --accent-h:  #1d4ed8;
+      --text:      #f1f5f9;
+      --muted:     #94a3b8;
+      --border:    rgba(255,255,255,0.08);
+      --radius:    12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(26, 26, 46, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo span { color: var(--accent); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .nav-phone {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-phone:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--accent-h); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 50%, var(--bg3) 100%);
+      padding: 5rem 2rem;
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-content { text-align: left; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(37, 99, 235, 0.4);
+      color: #93c5fd;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 2rem;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.875rem 2rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--accent-h); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--text);
+      padding: 0.875rem 2rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-1px); }
+    .hero-note {
+      margin-top: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .hero-image {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+    }
+    .hero-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    /* ── SECTION WRAPPER ── */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    /* ── PAIN POINTS ── */
+    .pain { background: var(--bg2); }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .pain-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+    .pain-card .pain-temp {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+    .pain-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .pain-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── FEATURES ── */
+    .features { background: var(--bg); }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .feature-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .feature-card:hover { border-color: rgba(37,99,235,0.4); transform: translateY(-3px); }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(37,99,235,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .feature-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: #60a5fa;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .feature-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── STATS / TRUST ── */
+    .proof { background: var(--bg2); }
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+    .trust-statement {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how { background: var(--bg); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      counter-reset: step;
+    }
+    .step { counter-increment: step; text-align: center; }
+    .step-num {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(37,99,235,0.15);
+      border: 2px solid rgba(37,99,235,0.4);
+      color: #60a5fa;
+      font-size: 1.1rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .step-num::before { content: counter(step); }
+    .step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .step p { font-size: 0.875rem; color: var(--muted); }
+
+    /* ── PRICING ── */
+    .pricing { background: var(--bg2); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pricing-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem 2rem;
+      position: relative;
+      transition: transform 0.2s;
+    }
+    .pricing-card:hover { transform: translateY(-3px); }
+    .pricing-card.featured {
+      border-color: var(--accent);
+      background: linear-gradient(160deg, var(--bg), #1e2d5a);
+    }
+    .featured-badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .trial-badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+    .pricing-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin: 0.5rem 0 0.25rem;
+    }
+    .price sup {
+      font-size: 1.25rem;
+      font-weight: 700;
+      vertical-align: super;
+      line-height: 0;
+    }
+    .price-period {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    .price-savings {
+      font-size: 0.85rem;
+      color: #34d399;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    .pricing-features li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding: 0.4rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .pricing-features li::before {
+      content: "\2713";
+      color: #34d399;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .btn-cta {
+      display: block;
+      text-align: center;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.9rem 1.5rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-cta:hover { background: var(--accent-h); transform: translateY(-1px); }
+    .btn-cta-outline {
+      display: block;
+      text-align: center;
+      background: transparent;
+      color: var(--text);
+      padding: 0.9rem 1.5rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-cta-outline:hover { border-color: rgba(255,255,255,0.3); transform: translateY(-1px); }
+    .pricing-note {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ── FAQ ── */
+    .faq { background: var(--bg); }
+    .faq-list {
+      max-width: 720px;
+      margin: 3rem auto 0;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: left;
+      padding: 1.25rem 2rem 1.25rem 0;
+      cursor: pointer;
+      position: relative;
+      font-family: inherit;
+      line-height: 1.4;
+    }
+    .faq-question::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--muted);
+      transition: transform 0.2s;
+    }
+    .faq-item.open .faq-question::after {
+      content: "\2212";
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 250px;
+      padding-bottom: 1.25rem;
+    }
+    .faq-answer p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--bg3), var(--accent));
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .cta-banner h2 {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .cta-banner p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+    .cta-banner .btn-primary {
+      background: #fff;
+      color: var(--accent);
+      font-size: 1.1rem;
+      padding: 1rem 2.5rem;
+    }
+    .cta-banner .btn-primary:hover { background: #f1f5f9; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+    footer .footer-logo {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    footer .footer-logo span { color: var(--accent); }
+    footer p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 0.25rem 0;
+    }
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--text); }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero { padding: 3.5rem 1.25rem; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-content { text-align: center; }
+      .hero-buttons { justify-content: center; }
+      .hero-image { max-width: 400px; margin: 0 auto; }
+      section { padding: 3.5rem 1.25rem; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .stats-bar { gap: 1.5rem; flex-direction: column; align-items: center; }
+      nav { padding: 0 1.25rem; }
+      .nav-phone { display: none; }
+      .pain-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script defer data-domain="northernautomation.ca" src="https://analytics.northernautomation.ca/js/script.tagged-events.outbound-links.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">Northern<span>Automation</span></a>
+      <div class="nav-right">
+        <a href="tel:+18077002319" class="nav-phone">(807) 700-2319</a>
+        <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly" class="nav-cta" data-plausible-event-name="CTA Click TB">Try It Free</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">Built in Thunder Bay</div>
+        <h1>Your Phone Rings at 2 AM.<br>It's <em>&minus;35.</em><br>Who's Answering?</h1>
+        <p>You're losing jobs every time a call goes to voicemail. Northern Automation answers every call to your business — nights, weekends, blizzards — qualifies the lead, and books the job before your competitor picks up.</p>
+        <div class="hero-buttons">
+          <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly" class="btn-primary" data-plausible-event-name="CTA Click TB">Try It Free for 14 Days</a>
+          <a href="/hvac-demo" class="btn-secondary" data-plausible-event-name="Demo Click TB">Hear It Handle a Call</a>
+        </div>
+        <p class="hero-note">14-day free trial &middot; No credit card required &middot; Cancel anytime</p>
+      </div>
+      <div class="hero-image">
+        <!-- TODO: Replace with Thunder Bay winter / contractor imagery -->
+        <img src="/images/hero-contractor.jpg" alt="HVAC contractor on a winter service call in Thunder Bay" width="560" height="400" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS — Thunder Bay Specific -->
+  <section class="pain">
+    <div class="container">
+      <div class="section-label">The Problem</div>
+      <h2 class="section-title">Thunder Bay winters don't wait.<br>Neither do your customers.</h2>
+      <p class="section-sub">When a furnace dies at &minus;35, the homeowner calls the first three contractors they find. Whoever picks up gets the job.</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-temp">&minus;35&deg;C</div>
+          <h3>No-heat calls are emergencies</h3>
+          <p>A furnace failure in a Thunder Bay January isn't an inconvenience — it's pipes freezing, water damage, and a family in danger. These callers don't leave voicemails. They call the next guy.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-temp">30%</div>
+          <h3>Of your calls go unanswered</h3>
+          <p>You're on the roof. You're under a unit. You're driving. The average contractor misses nearly a third of inbound calls. Every one of those is revenue that went to your competitor.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-temp">7 mo</div>
+          <h3>Heating season never stops</h3>
+          <p>October through April — that's seven months where every missed after-hours call is a lost emergency job. You can't answer them all yourself. You shouldn't have to.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <div class="section-label">What You Get</div>
+      <h2 class="section-title">Like hiring a dispatcher<br>who never calls in sick.</h2>
+      <p class="section-sub">Your AI receptionist answers every call, asks the right questions, and books the job — while you focus on the work in front of you.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3>Picks up every call, first ring</h3>
+          <p>2 AM on a Saturday in January? Answered. Long weekend? Answered. While you're elbow-deep in a furnace? Answered. Zero missed calls.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>Asks what you'd ask</h3>
+          <p>Name, number, what's wrong, how urgent, where they're located. You show up knowing exactly what you're walking into.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Books right into your calendar</h3>
+          <p>Jobs land in your Google Calendar automatically. You wake up, check your phone, and know where you're going.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Pays for itself on day one</h3>
+          <p>One saved emergency call covers months of service. At $197/mo, this costs less than the job you lost last week when you couldn't get to the phone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / STATS -->
+  <section class="proof">
+    <div class="container">
+      <div class="stats-bar">
+        <div class="stat">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Calls Handled</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Coverage, 365 Days</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">&lt; 24 Hrs</div>
+          <div class="stat-label">Average Setup</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">14 Days</div>
+          <div class="stat-label">Free Trial — No Risk</div>
+        </div>
+      </div>
+      <p class="trust-statement">Northern Automation is a Thunder Bay company built for Northern Ontario trades businesses. We understand this market because we're in it — the winters, the distances, the way business works up here. This isn't a Toronto startup selling to the regions. This is local.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Running in under 24 hours.<br>No tech skills needed.</h2>
+      <p class="section-sub">We set it up. You forward your number. That's it.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <h3>Sign up</h3>
+          <p>Start your 14-day free trial. Takes two minutes. No credit card charge until day 15.</p>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <h3>We build your AI receptionist</h3>
+          <p>We configure it with your business name, services, pricing, and service area. It sounds like your front desk.</p>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <h3>Forward your number</h3>
+          <p>One setting on your phone — takes under a minute. Your customers dial the same number they always have.</p>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <h3>Get booked jobs</h3>
+          <p>Check your calendar, see the jobs, show up and do the work. The phone is handled.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title" style="text-align:center;">Flat rate. No surprises.</h2>
+      <p class="section-sub" style="text-align:center; margin: 0 auto 0;">No per-minute fees. No contracts. No hidden charges. Less than the cost of one missed emergency call.</p>
+      <div class="pricing-grid">
+
+        <!-- Monthly -->
+        <div class="pricing-card">
+          <div class="trial-badge">14-Day Free Trial</div>
+          <h3>Monthly</h3>
+          <div class="price"><sup>$</sup>197</div>
+          <div class="price-period">CAD / month</div>
+          <ul class="pricing-features">
+            <li>Every call answered, 24/7/365</li>
+            <li>Lead qualification on every call</li>
+            <li>Google Calendar booking</li>
+            <li>Unlimited calls — no per-minute fees</li>
+            <li>Full setup included</li>
+          </ul>
+          <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly" class="btn-cta-outline" data-plausible-event-name="CTA Click TB">Try It Free</a>
+        </div>
+
+        <!-- Annual -->
+        <div class="pricing-card featured">
+          <div class="featured-badge">Best Value</div>
+          <div class="trial-badge">14-Day Free Trial</div>
+          <h3>Annual</h3>
+          <div class="price"><sup>$</sup>1,997</div>
+          <div class="price-period">CAD / year</div>
+          <div class="price-savings">Save $367/year</div>
+          <ul class="pricing-features">
+            <li>Everything in Monthly</li>
+            <li>Priority onboarding</li>
+            <li>Dedicated support</li>
+            <li>Lock in today's rate</li>
+          </ul>
+          <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=annual" class="btn-cta" data-plausible-event-name="CTA Click TB">Try It Free</a>
+        </div>
+
+      </div>
+      <p class="pricing-note">All prices in Canadian dollars &middot; 14-day free trial on all plans &middot; Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title" style="text-align:center;">Straight answers.</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">Will my customers know it's not a real person?</button>
+          <div class="faq-answer">
+            <p>Most can't tell. It answers with your business name, asks the same questions a good receptionist would, and sounds natural — not robotic. It's not a phone tree or a "press 1 for service" system. It's a conversation.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">What if it messes up a call?</button>
+          <div class="faq-answer">
+            <p>Every call is recorded and logged. You can review any one of them. But honestly, most HVAC calls are straightforward — name, number, what's broken, when can you come. The AI handles these the same way every time, without forgetting to ask something.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">Do I keep my current phone number?</button>
+          <div class="faq-answer">
+            <p>Yes. You set up a call forward on your existing number — takes about a minute. Your customers dial the same number they've always used. Nothing changes on their end.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">I'm not a tech person. Is this going to be complicated?</button>
+          <div class="faq-answer">
+            <p>No. We handle all the setup. You forward your number and you're live. If you can make a phone call, you can use this. Most of our customers are tradespeople, not tech people.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">What happens during a cold snap when call volume spikes?</button>
+          <div class="faq-answer">
+            <p>That's exactly when this matters most. When it drops to &minus;35 and every furnace in town starts acting up, the AI handles every single call — no busy signals, no voicemail, no "all lines are busy." While you're on a job, it's booking the next three.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">Can I cancel whenever I want?</button>
+          <div class="faq-answer">
+            <p>Yes. No contracts, no cancellation fees, no awkward phone call to retention. Cancel from your dashboard and your service stops at the end of the billing period.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">$197/month — is it actually worth it?</button>
+          <div class="faq-answer">
+            <p>One missed emergency call in January is worth $500 to $1,200. You're probably missing several every week during heating season. The service pays for itself the first time it catches a call you would have missed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2>Heating season doesn't wait.<br>Neither should you.</h2>
+    <p>Try it free for 14 days. If it doesn't save you jobs, cancel. No charge, no hassle.</p>
+    <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly" class="btn-primary" data-plausible-event-name="CTA Click TB">Try It Free for 14 Days</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Northern<span>Automation</span></div>
+    <p>Thunder Bay, Ontario, Canada</p>
+    <p><a href="tel:+18077002319">(807) 700-2319</a> &middot; <a href="mailto:support@northernautomation.ca">support@northernautomation.ca</a></p>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/hvac-demo">Demo</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
+    <p style="margin-top:1.5rem; font-size:0.78rem;">&copy; 2026 Northern Automation. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
