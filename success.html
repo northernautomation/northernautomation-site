@@ -13,12 +13,25 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg:       #1a1a2e;
+      --bg2:      #16213e;
+      --accent:   #2563eb;
+      --accent-h: #1d4ed8;
+      --text:     #f1f5f9;
+      --muted:    #94a3b8;
+      --border:   rgba(255,255,255,0.08);
+      --green:    #34d399;
+      --radius:   12px;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #1a1a2e;
-      color: #f1f5f9;
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 2rem;
@@ -26,33 +39,33 @@
     }
 
     .card {
-      background: #16213e;
-      border: 1px solid rgba(255,255,255,0.08);
+      background: var(--bg2);
+      border: 1px solid var(--border);
       border-radius: 16px;
       padding: 3rem 2.5rem;
-      max-width: 520px;
+      max-width: 580px;
       width: 100%;
       text-align: center;
     }
 
     .icon {
-      width: 64px;
-      height: 64px;
-      background: rgba(37, 99, 235, 0.15);
-      border: 2px solid rgba(37, 99, 235, 0.4);
+      width: 72px;
+      height: 72px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 2px solid rgba(16, 185, 129, 0.4);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1.75rem;
-      font-size: 1.75rem;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
     }
 
     h1 {
       font-size: 2rem;
       font-weight: 800;
       letter-spacing: -0.02em;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     h1 span {
@@ -62,55 +75,155 @@
       background-clip: text;
     }
 
-    .message {
+    .subtitle {
       font-size: 1.05rem;
-      color: #94a3b8;
-      line-height: 1.7;
-      margin-bottom: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
     }
 
     .trial-badge {
       display: inline-block;
       background: rgba(16, 185, 129, 0.12);
       border: 1px solid rgba(16, 185, 129, 0.35);
-      color: #34d399;
+      color: var(--green);
       font-size: 0.85rem;
       font-weight: 600;
       padding: 0.35rem 1rem;
       border-radius: 999px;
-      margin: 1.25rem 0 2rem;
+      margin-bottom: 2.5rem;
     }
 
+    /* ── Onboarding timeline ── */
+    .timeline {
+      text-align: left;
+      margin-bottom: 2.5rem;
+      counter-reset: onboard;
+    }
+    .timeline-step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 0.75rem 0;
+      counter-increment: onboard;
+    }
+    .timeline-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(37, 99, 235, 0.15);
+      border: 2px solid rgba(37, 99, 235, 0.4);
+      color: #60a5fa;
+      font-size: 0.85rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .timeline-num::before { content: counter(onboard); }
+    .timeline-content h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+    .timeline-content p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── Actions ── */
+    .actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
     .btn {
       display: inline-block;
-      background: #2563eb;
+      background: var(--accent);
       color: #fff;
-      padding: 0.8rem 2rem;
+      padding: 0.8rem 1.75rem;
       border-radius: 10px;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.95rem;
       transition: background 0.2s;
     }
+    .btn:hover { background: var(--accent-h); }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--text);
+      padding: 0.8rem 1.75rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.25); }
 
-    .btn:hover { background: #1d4ed8; }
+    .contact {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .contact a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    .contact a:hover { text-decoration: underline; }
 
-    .footer-note {
-      margin-top: 1.75rem;
-      font-size: 0.8rem;
-      color: #475569;
+    @media (max-width: 600px) {
+      .card { padding: 2rem 1.5rem; }
+      .actions { flex-direction: column; }
     }
   </style>
   <script defer data-domain="northernautomation.ca" src="https://analytics.northernautomation.ca/js/script.tagged-events.outbound-links.js"></script>
 </head>
 <body>
   <div class="card">
-    <div class="icon">✓</div>
+    <div class="icon">&#10003;</div>
     <h1>You're <span>In!</span></h1>
-    <p class="message">Check your email for next steps.<br>Your 14-day free trial has started.</p>
+    <p class="subtitle">Your 14-day free trial has started. Here's what happens next.</p>
     <div class="trial-badge">14-day free trial active</div>
-    <a href="https://northernautomation.ca" class="btn">Back to northernautomation.ca</a>
-    <p class="footer-note">Questions? Email us at support@northernautomation.ca</p>
+
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="timeline-num"></div>
+        <div class="timeline-content">
+          <h3>Check your email</h3>
+          <p>We've sent setup instructions to the email you signed up with.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-num"></div>
+        <div class="timeline-content">
+          <h3>We configure your AI receptionist</h3>
+          <p>Within 24 hours we'll have your custom AI trained on your business — services, pricing, and availability.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-num"></div>
+        <div class="timeline-content">
+          <h3>Your phone starts getting answered</h3>
+          <p>Forward your number and your AI picks up every call automatically. You just check your calendar.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="/" class="btn">Back to northernautomation.ca</a>
+      <a href="/hvac-demo" class="btn-outline" data-plausible-event-name="Demo Click">Watch the Demo</a>
+    </div>
+
+    <p class="contact">
+      Questions? Call us at <a href="tel:+18077002319">(807) 700-2319</a><br>
+      or email <a href="mailto:support@northernautomation.ca">support@northernautomation.ca</a>
+    </p>
   </div>
 </body>
 </html>
