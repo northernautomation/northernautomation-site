@@ -548,6 +548,39 @@
       line-height: 1.7;
     }
 
+    /* ── SEASONAL BANNER ── */
+    .seasonal {
+      background: linear-gradient(135deg, #1a3a2e, #0f3460);
+      border-top: 2px solid rgba(52, 211, 153, 0.3);
+      border-bottom: 2px solid rgba(52, 211, 153, 0.3);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .seasonal-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #34d399;
+      margin-bottom: 0.75rem;
+    }
+    .seasonal h2 {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .seasonal p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.7;
+    }
+    .seasonal .btn-primary {
+      font-size: 1rem;
+    }
+
     /* ── CTA BANNER ── */
     .cta-banner {
       background: linear-gradient(135deg, var(--bg3), var(--accent));
@@ -653,6 +686,16 @@
         <!-- TODO: Replace with Thunder Bay winter / contractor imagery -->
         <img src="/images/hero-contractor.jpg" alt="HVAC contractor on a winter service call in Thunder Bay" width="560" height="400" loading="eager">
       </div>
+    </div>
+  </section>
+
+  <!-- SEASONAL BANNER — Update monthly from seasonal-context.json -->
+  <section class="seasonal">
+    <div class="container">
+      <div class="seasonal-label">March 2026 — Early Spring</div>
+      <h2>Spring Booking Season Is 6 Weeks Out.<br>Is Your Phone Ready?</h2>
+      <p>The furnace emergencies are tapering off, but the spring rush is coming fast. Duct cleaning bookings, AC tune-ups, and spring service calls are about to ramp up. This is the best time to get your AI receptionist running — before the volume hits, not during it.</p>
+      <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly" class="btn-primary" data-plausible-event-name="CTA Click TB Seasonal">Set Up Now — Be Ready for April</a>
     </div>
   </section>
 

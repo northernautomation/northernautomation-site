@@ -341,3 +341,40 @@ Thunder Bay is an ideal beachhead market for Northern Automation:
 - **Word of mouth:** Land 3-5 happy customers and the market will start selling itself
 
 The landing page, call scripts, and outreach should all emphasize: local, practical, no-nonsense, winter-tough, and genuinely useful.
+
+---
+
+## Seasonal Messaging Calendar — 12-Month Plan
+
+| Month | Season | Primary HVAC Focus | Best Messaging Angle |
+|-------|--------|-------------------|---------------------|
+| January | Deep winter | Furnace emergencies | "2 AM emergency calls — who's answering?" |
+| February | Deep winter | Furnace emergencies | "Never miss an emergency at -35" |
+| March | Late winter / early spring | Transition + duct cleaning | "Spring booking rush is coming — get set up now" |
+| April | Spring | Duct cleaning + AC prep | "Duct cleaning calls are here — book them all" |
+| May | Spring | AC installations | "AC season is here — your phone is about to get busy" |
+| June | Early summer | AC service calls | "Peak cooling calls — every ring answered" |
+| July | Summer | AC emergencies | "Hottest month — hottest call volume" |
+| August | Summer | AC + planning ahead | "End of summer — heating season prep starts" |
+| September | Fall | Furnace tune-ups | "Heating season prep — book the tune-ups" |
+| October | Fall | Furnace installs | "Before the freeze — every call matters" |
+| November | Early winter | Emergency heating | "First cold snap — the calls are coming" |
+| December | Winter | Emergency heating | "Holidays — you're off, your phone isn't" |
+
+**Update cadence:** First of each month, update `seasonal-context.json` and the Vapi assistant seasonal block. Update the thunder-bay.html seasonal banner at the same time.
+
+---
+
+## Implementation Note — 2026-03-14
+
+**Vapi outbound assistant updated based on this audit.**
+- Assistant ID: 2f72a114-ab33-4c5d-8f58-7726d3358f93 (Northern Automation HVAC Cold Call Agent)
+- Updated at: 2026-03-14T22:10:33Z
+- All persona, tone, pain framing, and objection handling from this audit implemented in live Vapi script
+
+**Seasonal intelligence added — 2026-03-14**
+- `seasonal-context.json` created — single source of truth for current seasonal messaging
+- thunder-bay.html seasonal banner added (March 2026: spring booking rush)
+- Vapi assistant system prompt updated with seasonal context block
+- 12-month messaging calendar documented above
+- Update cadence: 1st of each month

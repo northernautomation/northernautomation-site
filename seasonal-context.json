@@ -1,0 +1,75 @@
+{
+  "current_season": "early_spring",
+  "month": "March",
+  "year": 2026,
+  "updated": "2026-03-14",
+  "hvac_focus": "duct_cleaning_and_ac_prep",
+  "messaging_angle": "spring_booking_rush_incoming",
+  "seasonal_headline": "Spring Booking Season Is 6 Weeks Out. Is Your Phone Ready?",
+  "seasonal_body": "March in Thunder Bay — the furnace emergencies are tapering off, but the spring rush is coming fast. Duct cleaning bookings, AC tune-ups, and spring service calls are about to ramp up. Set up your AI receptionist now, before the volume hits.",
+  "urgency": "Set up now. Be ready for April.",
+  "vapi_seasonal_context": "It is currently early spring (March 2026) in Thunder Bay. Heating season is winding down but furnace emergencies still come in on cold nights. The big transition is happening now: duct cleaning season starts in 4-6 weeks, AC tune-up and installation bookings ramp up in April and May. This is the shoulder season — call volume is lower right now, which makes it the perfect time to get set up before the spring rush hits. Contractors are transitioning from emergency heating mode to spring service booking mode. Use this framing: the best time to set this up is before the rush, not during it.",
+  "next_update": "2026-04-01",
+  "monthly_calendar": {
+    "january": {
+      "season": "deep_winter",
+      "focus": "furnace_emergencies",
+      "angle": "2am emergency calls — who is answering?"
+    },
+    "february": {
+      "season": "deep_winter",
+      "focus": "furnace_emergencies",
+      "angle": "Never miss an emergency at -35"
+    },
+    "march": {
+      "season": "late_winter_early_spring",
+      "focus": "transition_and_duct_cleaning",
+      "angle": "Spring booking rush is coming — get set up now"
+    },
+    "april": {
+      "season": "spring",
+      "focus": "duct_cleaning_and_ac_prep",
+      "angle": "Duct cleaning calls are here — book them all"
+    },
+    "may": {
+      "season": "spring",
+      "focus": "ac_installations",
+      "angle": "AC season is here — your phone is about to get busy"
+    },
+    "june": {
+      "season": "early_summer",
+      "focus": "ac_service_calls",
+      "angle": "Peak cooling calls — every ring answered"
+    },
+    "july": {
+      "season": "summer",
+      "focus": "ac_emergencies",
+      "angle": "Hottest month — hottest call volume"
+    },
+    "august": {
+      "season": "summer",
+      "focus": "ac_and_planning_ahead",
+      "angle": "End of summer — heating season prep starts"
+    },
+    "september": {
+      "season": "fall",
+      "focus": "furnace_tune_ups",
+      "angle": "Heating season prep — book the tune-ups"
+    },
+    "october": {
+      "season": "fall",
+      "focus": "furnace_installs",
+      "angle": "Before the freeze — every call matters"
+    },
+    "november": {
+      "season": "early_winter",
+      "focus": "emergency_heating",
+      "angle": "First cold snap — the calls are coming"
+    },
+    "december": {
+      "season": "winter",
+      "focus": "emergency_heating",
+      "angle": "Holidays — you are off, your phone is not"
+    }
+  }
+}
