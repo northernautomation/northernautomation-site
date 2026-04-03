@@ -22,7 +22,7 @@
       <li><a href="/contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <a href="tel:+18077002319" class="nav-phone">(807) 700-2319</a>
+      <a href="tel:+18888700764" class="nav-phone">1-888-870-0764</a>
       <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly"
          class="nav-cta"
          data-plausible-event-name="CTA Click">Start Free Trial</a>
@@ -53,7 +53,7 @@
       <p class="footer-tagline">Thunder Bay, Ontario, Canada</p>
       <p class="footer-tagline">Powered by AI. Built in Canada.</p>
       <br>
-      <p><a href="tel:+18077002319">(807) 700-2319</a></p>
+      <p><a href="tel:+18888700764">1-888-870-0764</a></p>
       <p><a href="mailto:hello@northernautomation.ca">hello@northernautomation.ca</a></p>
     </div>
     <div class="footer-col">
