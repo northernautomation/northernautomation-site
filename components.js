@@ -23,7 +23,7 @@
     </ul>
     <div class="nav-right">
       <a href="tel:+18888700764" class="nav-phone">1-888-870-0764</a>
-      <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly"
+      <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=growth-monthly"
          class="nav-cta"
          data-plausible-event-name="CTA Click">Start Free Trial</a>
       <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -38,7 +38,7 @@
       <li><a href="/#pricing">Pricing</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-    <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly"
+    <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=growth-monthly"
        class="nav-cta"
        data-plausible-event-name="CTA Click">Start Free Trial</a>
   </div>
