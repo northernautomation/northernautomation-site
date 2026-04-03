@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- VERTICAL-SPECIFIC -->
+  <title>AI Receptionist for Home Services — Northern Automation</title>
+  <meta name="description" content="Never miss a quote request again. Your AI receptionist captures every lead, qualifies the job, and books the estimate — before customers move on to the next name on the list.">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- VERTICAL-SPECIFIC -->
+  <link rel="canonical" href="https://northernautomation.ca/home-services">
+
+  <!-- Open Graph -->
+  <!-- VERTICAL-SPECIFIC -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://northernautomation.ca/home-services">
+  <meta property="og:title" content="AI Receptionist for Home Services — Northern Automation">
+  <meta property="og:description" content="Never miss a quote request again. AI captures every lead, qualifies the job, and books the estimate 24/7.">
+  <meta property="og:site_name" content="Northern Automation">
+  <meta property="og:locale" content="en_CA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <!-- VERTICAL-SPECIFIC -->
+  <meta name="twitter:title" content="AI Receptionist for Home Services — Northern Automation">
+  <meta name="twitter:description" content="Never miss a quote request again. AI captures every lead, qualifies the job, and books the estimate 24/7.">
+
+  <link rel="stylesheet" href="/styles.css">
+  <script defer data-domain="northernautomation.ca" src="https://analytics.northernautomation.ca/js/script.tagged-events.outbound-links.js"></script>
+</head>
+<body>
+
+  <div id="nav"></div>
+
+  <!-- ══════════════════════════════════════════
+       HERO — VERTICAL-SPECIFIC
+  ══════════════════════════════════════════ -->
+  <section class="vertical-hero">
+    <div class="container">
+      <!-- VERTICAL-SPECIFIC -->
+      <div class="badge-blue">Home Services</div>
+      <h1>Every Quote Request Answered,<br>Every Job <em>Booked</em></h1>
+      <p>Whether it's landscaping, house cleaning, painting, or renovations — customers want an answer fast. Your AI receptionist captures every lead, qualifies the job, and books the estimate before they move on to the next name on the list.</p>
+      <div class="vertical-buttons">
+        <a href="#demo" class="btn-primary" data-plausible-event-name="Demo Scroll Click">Try a Live Demo Call</a>
+        <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly" class="btn-secondary" data-plausible-event-name="CTA Click">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PAIN POINTS — VERTICAL-SPECIFIC
+  ══════════════════════════════════════════ -->
+  <section class="pain-points">
+    <div class="container">
+      <!-- VERTICAL-SPECIFIC -->
+      <div class="section-label">Why It Costs You</div>
+      <h2 class="section-title">Three ways missed calls kill your pipeline</h2>
+      <div class="pain-grid">
+
+        <div class="pain-card">
+          <!-- VERTICAL-SPECIFIC -->
+          <span class="pain-emoji">📵</span>
+          <h3>Customers Don't Leave Voicemails</h3>
+          <p>When someone is shopping for a quote, they're calling 3–5 companies. If you don't answer, they hang up and call the next one. They don't leave a message and they don't call back.</p>
+        </div>
+
+        <div class="pain-card">
+          <!-- VERTICAL-SPECIFIC -->
+          <span class="pain-emoji">🏗️</span>
+          <h3>You're Always On a Job, Not Near Your Phone</h3>
+          <p>You can't answer calls while running equipment, doing physical labour, or driving between sites. Every hour on the job is an hour your phone goes unanswered — and leads go cold.</p>
+        </div>
+
+        <div class="pain-card">
+          <!-- VERTICAL-SPECIFIC -->
+          <span class="pain-emoji">🌿</span>
+          <h3>Your Busiest Season Is Your Hardest Time to Answer</h3>
+          <p>Spring rush, pre-holiday bookings, storm aftermath — your phones are busiest exactly when you have the least time to take calls. Your AI scales instantly with zero overhead.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CALCULATOR — VERTICAL-SPECIFIC defaults
+  ══════════════════════════════════════════ -->
+  <!-- VERTICAL-SPECIFIC: data-calc-missed, data-calc-value -->
+  <section class="calculator"
+    data-calc-missed="12"
+    data-calc-value="400"
+    data-calc-close="30">
+    <div class="container">
+      <div class="section-label">Revenue Calculator</div>
+      <h2 class="section-title">What Are Missed Calls Costing Your Business?</h2>
+      <p class="section-sub">Adjust to your numbers — see the jobs walking out the door every month.</p>
+
+      <div class="calc-card">
+        <div class="calc-inputs">
+
+          <div class="calc-group">
+            <label for="calcMissed">
+              Missed calls per week
+              <span class="calc-val" id="calcMissedVal">12 calls/wk</span>
+            </label>
+            <input type="range" id="calcMissed" class="calc-slider" min="1" max="50" step="1" value="12">
+          </div>
+
+          <div class="calc-group">
+            <label for="calcValue">
+              Average job value
+              <span class="calc-val" id="calcValueLabel">&nbsp;</span>
+            </label>
+            <div class="calc-number-wrap">
+              <input type="number" id="calcValue" class="calc-number" min="50" max="50000" step="50" value="400" placeholder="400">
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label for="calcClose">
+              Close rate on answered calls
+              <span class="calc-val" id="calcCloseVal">30%</span>
+            </label>
+            <input type="range" id="calcClose" class="calc-slider" min="5" max="80" step="5" value="30">
+          </div>
+
+        </div>
+
+        <div class="calc-output">
+          <div class="calc-output-grid">
+            <div class="calc-output-item">
+              <div class="calc-output-label">Revenue Lost / Month</div>
+              <div class="calc-output-value" id="calcMonthly">—</div>
+            </div>
+            <div class="calc-output-item">
+              <div class="calc-output-label">Revenue Lost / Year</div>
+              <div class="calc-output-value" id="calcAnnual">—</div>
+            </div>
+          </div>
+          <p class="calc-comparison">
+            Northern Automation costs <strong>$197/month</strong>. You're leaving <strong><span id="calcComparison">—</span></strong> on the table every month.
+          </p>
+          <div class="calc-cta-wrap">
+            <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly"
+               class="btn-primary"
+               data-plausible-event-name="CTA Click">Stop Losing Jobs — Start Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VERTICAL FEATURES — VERTICAL-SPECIFIC
+  ══════════════════════════════════════════ -->
+  <section class="vert-features">
+    <div class="container">
+      <!-- VERTICAL-SPECIFIC -->
+      <div class="section-label">What It Handles</div>
+      <h2 class="section-title">How AI Handles Home Service Calls</h2>
+      <p class="section-sub">Trained on the calls your customers make — from quote requests to seasonal bookings.</p>
+
+      <ul class="vert-feature-list">
+        <!-- VERTICAL-SPECIFIC list items -->
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Quote request capture</strong>
+            <span>Records job type, address, property size, and desired timing for every estimate request — a complete lead record before you call back.</span>
+          </div>
+        </li>
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Job qualification</strong>
+            <span>Gathers the details you need before showing up: scope of work, access requirements, materials, and budget range — so estimates are faster and more accurate.</span>
+          </div>
+        </li>
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Estimate booking</strong>
+            <span>Schedules site visits and estimate appointments directly into your calendar — no back-and-forth, no phone tag.</span>
+          </div>
+        </li>
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Service area filtering</strong>
+            <span>Handles calls from outside your service area politely and professionally — saving your time for the leads you can actually close.</span>
+          </div>
+        </li>
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Seasonal surge handling</strong>
+            <span>Scales instantly during spring rush, pre-holiday periods, and storm season — no overtime, no temp staff, no missed bookings.</span>
+          </div>
+        </li>
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Full job details by text and email</strong>
+            <span>Every call logged and delivered with job type, address, scope, and customer contact — so you show up to every estimate already prepped.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       DEMO — VERTICAL-SPECIFIC placeholder
+  ══════════════════════════════════════════ -->
+  <section class="audio-demo" id="demo">
+    <div class="container">
+      <!-- VERTICAL-SPECIFIC -->
+      <div class="section-label">Live Demo</div>
+      <h2 class="section-title text-center">Hear It Handle a Home Services Call</h2>
+      <p class="section-sub text-center">Call the number below — our AI will answer as your receptionist. No signup needed.</p>
+      <div class="audio-placeholder">
+        <!-- VERTICAL-SPECIFIC: swap src when home services demo recording is ready -->
+        <p style="font-size:2rem;">📞</p>
+        <p><strong style="color:var(--text);">(807) 700-2319</strong></p>
+        <p>Call now and hear the AI receptionist in action.<br>Home services demo recording coming soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PRICING — shared
+  ══════════════════════════════════════════ -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-label text-center">Pricing</div>
+      <h2 class="section-title text-center">Simple, flat-rate pricing</h2>
+      <p class="section-sub text-center">No per-minute fees. No contracts. No surprises.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="badge-trial">14-Day Free Trial</div>
+          <h3>Monthly</h3>
+          <div class="price"><sup>$</sup>197</div>
+          <div class="price-period">CAD / month</div>
+          <ul class="pricing-features">
+            <li>AI receptionist answers every call</li>
+            <li>Lead qualification on every call</li>
+            <li>Google Calendar booking</li>
+            <li>Unlimited calls included</li>
+            <li>Setup included</li>
+          </ul>
+          <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly" class="btn-cta-outline" data-plausible-event-name="CTA Click">Get Started Free</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="badge-best">Best Value</div>
+          <div class="badge-trial">14-Day Free Trial</div>
+          <h3>Annual</h3>
+          <div class="price"><sup>$</sup>1,997</div>
+          <div class="price-period">CAD / year</div>
+          <div class="price-savings">Save $367/year vs monthly</div>
+          <ul class="pricing-features">
+            <li>Everything in Monthly</li>
+            <li>Priority onboarding</li>
+            <li>Dedicated support</li>
+            <li>Lock in today's rate</li>
+          </ul>
+          <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=annual" class="btn-cta" data-plausible-event-name="CTA Click">Get Started Free</a>
+        </div>
+      </div>
+      <p class="pricing-note">All prices in Canadian dollars &middot; 14-day free trial on all plans &middot; No setup fees &middot; Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FAQ — shared
+  ══════════════════════════════════════════ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-label text-center">FAQ</div>
+      <h2 class="section-title text-center">Common questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">What happens when the AI can't answer a question?</button>
+          <div class="faq-answer"><p>It takes a message and alerts you immediately by text and email with the caller's name, number, and what they need — so you can call back when you're free from the job site.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Will customers know it's AI?</button>
+          <div class="faq-answer"><p>Our AI is natural and conversational — most callers won't notice a difference. We never claim to be human, and we always disclose that it's AI if a caller directly asks. You stay fully compliant.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How long does setup take?</button>
+          <div class="faq-answer"><p>Most businesses are live within 24 hours of signing up. We configure the AI to your services, service area, and calendar. You forward your number and you're done.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I keep my existing phone number?</button>
+          <div class="faq-answer"><p>Yes. Set up call forwarding from your existing number — takes under a minute. Customers always dial the same number they always have.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What if I already have someone answering calls?</button>
+          <div class="faq-answer"><p>Use the AI for after-hours calls, overflow during busy periods, and the hours you're on a job site. It works alongside your existing setup — filling every gap.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is there a contract?</button>
+          <div class="faq-answer"><p>No. Month-to-month on the monthly plan. Cancel any time — no penalties, no awkward conversations.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="/components.js"></script>
+  <script src="/calculator.js"></script>
+
+</body>
+</html>

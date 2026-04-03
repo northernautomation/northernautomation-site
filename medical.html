@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- VERTICAL-SPECIFIC -->
+  <title>AI Receptionist for Medical Clinics — Northern Automation</title>
+  <meta name="description" content="Your patients deserve someone to answer the phone. AI handles appointment booking, routine inquiries, and after-hours calls 24/7 — so your staff can focus on care.">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- VERTICAL-SPECIFIC -->
+  <link rel="canonical" href="https://northernautomation.ca/medical">
+
+  <!-- Open Graph -->
+  <!-- VERTICAL-SPECIFIC -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://northernautomation.ca/medical">
+  <meta property="og:title" content="AI Receptionist for Medical Clinics — Northern Automation">
+  <meta property="og:description" content="Your patients deserve someone to answer the phone. AI handles appointment booking and after-hours calls 24/7.">
+  <meta property="og:site_name" content="Northern Automation">
+  <meta property="og:locale" content="en_CA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <!-- VERTICAL-SPECIFIC -->
+  <meta name="twitter:title" content="AI Receptionist for Medical Clinics — Northern Automation">
+  <meta name="twitter:description" content="Your patients deserve someone to answer the phone. AI handles appointment booking and after-hours calls 24/7.">
+
+  <link rel="stylesheet" href="/styles.css">
+  <script defer data-domain="northernautomation.ca" src="https://analytics.northernautomation.ca/js/script.tagged-events.outbound-links.js"></script>
+</head>
+<body>
+
+  <div id="nav"></div>
+
+  <!-- ══════════════════════════════════════════
+       HERO — VERTICAL-SPECIFIC
+  ══════════════════════════════════════════ -->
+  <section class="vertical-hero">
+    <div class="container">
+      <!-- VERTICAL-SPECIFIC -->
+      <div class="badge-blue">Medical Clinics</div>
+      <h1>Your Patients Deserve<br>Someone to <em>Answer the Phone</em></h1>
+      <p>Long hold times and unreturned calls push patients to walk-in clinics and competing practices. Your AI receptionist answers every call, books appointments, and handles routine inquiries — so your staff can focus entirely on care.</p>
+      <div class="vertical-buttons">
+        <a href="#demo" class="btn-primary" data-plausible-event-name="Demo Scroll Click">Try a Live Demo Call</a>
+        <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly" class="btn-secondary" data-plausible-event-name="CTA Click">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PAIN POINTS — VERTICAL-SPECIFIC
+  ══════════════════════════════════════════ -->
+  <section class="pain-points">
+    <div class="container">
+      <!-- VERTICAL-SPECIFIC -->
+      <div class="section-label">Why It Costs You</div>
+      <h2 class="section-title">Three ways missed calls hurt your clinic</h2>
+      <div class="pain-grid">
+
+        <div class="pain-card">
+          <!-- VERTICAL-SPECIFIC -->
+          <span class="pain-emoji">⏳</span>
+          <h3>Patients on Hold Too Long Walk Away</h3>
+          <p>Frustrated patients hang up and find another clinic — or worse, head to the ER for something routine. Every abandoned call is a patient your practice didn't retain.</p>
+        </div>
+
+        <div class="pain-card">
+          <!-- VERTICAL-SPECIFIC -->
+          <span class="pain-emoji">🏃</span>
+          <h3>Your Admin Staff Is Pulled in Every Direction</h3>
+          <p>Mornings and post-lunch are your busiest call windows — and exactly when your team is most stretched. Phones ring unanswered while staff handle check-ins, billing, and paperwork.</p>
+        </div>
+
+        <div class="pain-card">
+          <!-- VERTICAL-SPECIFIC -->
+          <span class="pain-emoji">🌙</span>
+          <h3>Patients Don't Stop Needing Help After 5 PM</h3>
+          <p>Questions about appointments, medications, and test results come in after-hours. Every one that hits voicemail is a patient experience failure — and a patient who considers switching clinics.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CALCULATOR — VERTICAL-SPECIFIC defaults
+  ══════════════════════════════════════════ -->
+  <!-- VERTICAL-SPECIFIC: data-calc-missed, data-calc-value -->
+  <section class="calculator"
+    data-calc-missed="12"
+    data-calc-value="250"
+    data-calc-close="30">
+    <div class="container">
+      <div class="section-label">Revenue Calculator</div>
+      <h2 class="section-title">What Are Missed Calls Costing Your Clinic?</h2>
+      <p class="section-sub">Adjust to your numbers — see the appointments walking out the door every month.</p>
+
+      <div class="calc-card">
+        <div class="calc-inputs">
+
+          <div class="calc-group">
+            <label for="calcMissed">
+              Missed calls per week
+              <span class="calc-val" id="calcMissedVal">12 calls/wk</span>
+            </label>
+            <input type="range" id="calcMissed" class="calc-slider" min="1" max="50" step="1" value="12">
+          </div>
+
+          <div class="calc-group">
+            <label for="calcValue">
+              Average appointment value
+              <span class="calc-val" id="calcValueLabel">&nbsp;</span>
+            </label>
+            <div class="calc-number-wrap">
+              <input type="number" id="calcValue" class="calc-number" min="50" max="50000" step="25" value="250" placeholder="250">
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label for="calcClose">
+              Booking rate on answered calls
+              <span class="calc-val" id="calcCloseVal">30%</span>
+            </label>
+            <input type="range" id="calcClose" class="calc-slider" min="5" max="80" step="5" value="30">
+          </div>
+
+        </div>
+
+        <div class="calc-output">
+          <div class="calc-output-grid">
+            <div class="calc-output-item">
+              <div class="calc-output-label">Revenue Lost / Month</div>
+              <div class="calc-output-value" id="calcMonthly">—</div>
+            </div>
+            <div class="calc-output-item">
+              <div class="calc-output-label">Revenue Lost / Year</div>
+              <div class="calc-output-value" id="calcAnnual">—</div>
+            </div>
+          </div>
+          <p class="calc-comparison">
+            Northern Automation costs <strong>$197/month</strong>. You're leaving <strong><span id="calcComparison">—</span></strong> on the table every month.
+          </p>
+          <div class="calc-cta-wrap">
+            <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly"
+               class="btn-primary"
+               data-plausible-event-name="CTA Click">Stop Losing Patients — Start Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VERTICAL FEATURES — VERTICAL-SPECIFIC
+  ══════════════════════════════════════════ -->
+  <section class="vert-features">
+    <div class="container">
+      <!-- VERTICAL-SPECIFIC -->
+      <div class="section-label">What It Handles</div>
+      <h2 class="section-title">How AI Handles Medical Clinic Calls</h2>
+      <p class="section-sub">Trained on the calls your patients actually make — from appointment requests to after-hours questions.</p>
+
+      <ul class="vert-feature-list">
+        <!-- VERTICAL-SPECIFIC list items -->
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Appointment booking</strong>
+            <span>New and returning patient scheduling by appointment type and provider — booked directly into your calendar with full patient details.</span>
+          </div>
+        </li>
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Symptom triage routing</strong>
+            <span>Identifies urgent vs. routine concerns and routes appropriately — booking same-day slots for urgent matters, regular scheduling for routine care.</span>
+          </div>
+        </li>
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Prescription renewal requests</strong>
+            <span>Captures renewal requests and logs them for staff follow-up — patients get a confirmed callback time instead of an endless hold.</span>
+          </div>
+        </li>
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>After-hours call handling</strong>
+            <span>Non-emergency questions handled and logged for morning follow-up. True emergencies are directed to 911 or the nearest emergency department.</span>
+          </div>
+        </li>
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Insurance and fee inquiries</strong>
+            <span>Answers common questions about OHIP coverage, billing, accepted plans, and clinic services — without tying up your staff.</span>
+          </div>
+        </li>
+        <li>
+          <div class="vert-feature-bullet"></div>
+          <div>
+            <strong>Call summaries</strong>
+            <span>Every call logged with patient name, contact, reason for contact, and any details collected — delivered by text and email.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       DEMO — VERTICAL-SPECIFIC placeholder
+  ══════════════════════════════════════════ -->
+  <section class="audio-demo" id="demo">
+    <div class="container">
+      <!-- VERTICAL-SPECIFIC -->
+      <div class="section-label">Live Demo</div>
+      <h2 class="section-title text-center">Hear It Handle a Medical Clinic Call</h2>
+      <p class="section-sub text-center">Call the number below — our AI will answer as your receptionist. No signup needed.</p>
+      <div class="audio-placeholder">
+        <!-- VERTICAL-SPECIFIC: swap src when medical demo recording is ready -->
+        <p style="font-size:2rem;">📞</p>
+        <p><strong style="color:var(--text);">(807) 700-2319</strong></p>
+        <p>Call now and hear the AI receptionist in action.<br>Medical clinic demo recording coming soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PRICING — shared
+  ══════════════════════════════════════════ -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-label text-center">Pricing</div>
+      <h2 class="section-title text-center">Simple, flat-rate pricing</h2>
+      <p class="section-sub text-center">No per-minute fees. No contracts. No surprises.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="badge-trial">14-Day Free Trial</div>
+          <h3>Monthly</h3>
+          <div class="price"><sup>$</sup>197</div>
+          <div class="price-period">CAD / month</div>
+          <ul class="pricing-features">
+            <li>AI receptionist answers every call</li>
+            <li>Lead qualification on every call</li>
+            <li>Google Calendar booking</li>
+            <li>Unlimited calls included</li>
+            <li>Setup included</li>
+          </ul>
+          <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=monthly" class="btn-cta-outline" data-plausible-event-name="CTA Click">Get Started Free</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="badge-best">Best Value</div>
+          <div class="badge-trial">14-Day Free Trial</div>
+          <h3>Annual</h3>
+          <div class="price"><sup>$</sup>1,997</div>
+          <div class="price-period">CAD / year</div>
+          <div class="price-savings">Save $367/year vs monthly</div>
+          <ul class="pricing-features">
+            <li>Everything in Monthly</li>
+            <li>Priority onboarding</li>
+            <li>Dedicated support</li>
+            <li>Lock in today's rate</li>
+          </ul>
+          <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=annual" class="btn-cta" data-plausible-event-name="CTA Click">Get Started Free</a>
+        </div>
+      </div>
+      <p class="pricing-note">All prices in Canadian dollars &middot; 14-day free trial on all plans &middot; No setup fees &middot; Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FAQ — shared
+  ══════════════════════════════════════════ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-label text-center">FAQ</div>
+      <h2 class="section-title text-center">Common questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">What happens when the AI can't answer a question?</button>
+          <div class="faq-answer"><p>It takes a message and alerts you immediately by text and email with the patient's name, number, and what they need. Urgent calls can be configured to transfer live to a nurse or on-call provider.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Will patients know it's AI?</button>
+          <div class="faq-answer"><p>Our AI is natural and conversational — most callers won't notice a difference. We never claim to be human, and we always disclose that it's AI if a caller directly asks. You stay fully compliant.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How long does setup take?</button>
+          <div class="faq-answer"><p>Most clinics are live within 24 hours of signing up. We configure the AI to your services, providers, scheduling rules, and calendar. You forward your number and you're done.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I keep my existing phone number?</button>
+          <div class="faq-answer"><p>Yes. Set up call forwarding from your existing number — takes under a minute. Patients always dial the same number they always have.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What if I already have a receptionist?</button>
+          <div class="faq-answer"><p>Use the AI for after-hours calls, lunch breaks, and overflow during peak times. It works alongside your existing team — not instead of them.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is there a contract?</button>
+          <div class="faq-answer"><p>No. Month-to-month on the monthly plan. Cancel any time — no penalties, no awkward conversations.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="/components.js"></script>
+  <script src="/calculator.js"></script>
+
+</body>
+</html>
