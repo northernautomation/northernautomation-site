@@ -193,6 +193,7 @@
           if (!res.ok) throw new Error('Server error ' + res.status);
           form.style.display = 'none';
           success.style.display = 'block';
+          if (typeof fbq === 'function') fbq('track', 'Lead');
         })
         .catch(function () {
           errorBox.textContent = 'Something went wrong. Please email us directly at hello@northernautomation.ca or call 1-888-870-0764.';
