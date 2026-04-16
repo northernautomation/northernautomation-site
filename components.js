@@ -34,7 +34,7 @@ fbq('track', 'PageView');
       <a href="tel:+18888700764" class="nav-phone">1-888-870-0764</a>
       <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=growth-monthly"
          class="nav-cta"
-         data-plausible-event-name="CTA Click">Start Free Trial</a>
+         data-plausible-event-name="CTA Click">Start Free</a>
       <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -49,7 +49,7 @@ fbq('track', 'PageView');
     </ul>
     <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=growth-monthly"
        class="nav-cta"
-       data-plausible-event-name="CTA Click">Start Free Trial</a>
+       data-plausible-event-name="CTA Click">Start Free</a>
   </div>
 </nav>`;
 
