@@ -3,7 +3,7 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
-  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://analytics.northernautomation.ca; media-src 'self'; connect-src 'self' https://analytics.northernautomation.ca; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://analytics.northernautomation.ca; media-src 'self'; connect-src 'self' https://analytics.northernautomation.ca; base-uri 'self'; form-action 'self' https://webhook.northernautomation.ca; frame-ancestors 'none'
   Cache-Control: public, max-age=300
 
 /videos/*
