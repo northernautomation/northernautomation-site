@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Up Your AI Receptionist — Northern Automation</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://northernautomation.ca/onboarding.html">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer data-domain="northernautomation.ca" src="https://analytics.northernautomation.ca/js/script.tagged-events.outbound-links.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a1a2e;
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 3rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .form-card {
+      background: #16213e;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      max-width: 560px;
+      width: 100%;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .form-badge {
+      display: inline-block;
+      background: rgba(37,99,235,0.15);
+      border: 1px solid rgba(37,99,235,0.4);
+      color: #60a5fa;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-header h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-header p {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 0.4rem;
+    }
+
+    label .required {
+      color: #f87171;
+      margin-left: 2px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 0.7rem 0.9rem;
+      font-size: 0.95rem;
+      color: #f1f5f9;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus {
+      border-color: #2563eb;
+    }
+
+    select option {
+      background: #16213e;
+      color: #f1f5f9;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.9rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .submit-btn:hover { background: #1d4ed8; }
+    .submit-btn:disabled { background: #475569; cursor: not-allowed; }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: #64748b;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .form-note a { color: #60a5fa; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .form-card { padding: 1.75rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-card">
+    <div class="form-header">
+      <div class="form-badge">Step 2 of 2</div>
+      <h1>Set Up Your AI Receptionist</h1>
+      <p>Takes about 5 minutes. We handle the rest — your AI will be live within 24 hours.</p>
+    </div>
+
+    <form action="https://webhook.northernautomation.ca/onboarding" method="POST" id="onboardingForm">
+
+      <div class="form-group">
+        <label for="business_name">Business Name <span class="required">*</span></label>
+        <input type="text" id="business_name" name="business_name" required
+               placeholder="e.g. Mike's HVAC Thunder Bay" autocomplete="organization">
+      </div>
+
+      <div class="form-group">
+        <label for="contact_name">Your Name <span class="required">*</span></label>
+        <input type="text" id="contact_name" name="contact_name" required
+               placeholder="e.g. Mike Johnson" autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Business Phone Number <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" required
+               placeholder="e.g. 807-555-0100" autocomplete="tel">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required
+               placeholder="e.g. mike@mikeshvac.ca" autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label for="industry">Industry</label>
+        <select id="industry" name="industry">
+          <option value="">Select your industry</option>
+          <option value="hvac">HVAC &amp; Plumbing</option>
+          <option value="dental">Dental Office</option>
+          <option value="medical">Medical Clinic</option>
+          <option value="legal">Law Firm</option>
+          <option value="home_services">Home Services (landscaping, cleaning, renos)</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="best_time">Best Time to Reach You</label>
+        <select id="best_time" name="best_time">
+          <option value="">Select a time window</option>
+          <option value="morning">Morning (8am – 12pm)</option>
+          <option value="afternoon">Afternoon (12pm – 5pm)</option>
+          <option value="evening">Evening (5pm – 8pm)</option>
+          <option value="anytime">Anytime during business hours</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">
+        Submit &amp; Start Setup &rarr;
+      </button>
+    </form>
+
+    <p class="form-note">
+      Questions? Email <a href="mailto:support@northernautomation.ca">support@northernautomation.ca</a>
+      or call <a href="tel:+18888700764">1-888-870-0764</a>
+    </p>
+  </div>
+
+  <script>
+    document.getElementById('onboardingForm').addEventListener('submit', function() {
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Submitting…';
+    });
+  </script>
+</body>
+</html>
