@@ -55,7 +55,7 @@ fbq('track', 'PageView');
 
   /* ── FOOTER ── */
   const footerHTML = `
-<footer>
+<footer id="contact">
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="/" class="footer-logo">Northern<span>Automation</span></a>
