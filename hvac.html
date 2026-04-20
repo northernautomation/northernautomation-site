@@ -239,13 +239,24 @@
       <h2 class="section-title text-center">Plans that grow with you</h2>
       <p class="pricing-anchor text-center">A part-time receptionist in Ontario costs $3,200/month in wages alone. Northern Automation starts at $97/month and answers every call — including the midnight emergency.</p>
       <p class="section-sub text-center">Volume-based pricing. 14-day free trial on every plan — no credit card required, no charge for 14 days.</p>
+      <div class="billing-toggle">
+        <span class="toggle-label active-label" id="toggle-label-monthly">Monthly</span>
+        <label class="toggle-switch" aria-label="Toggle annual billing">
+          <input type="checkbox" id="billingToggle" onchange="setPricingToggle(this.checked)">
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label" id="toggle-label-annual">Annual <span class="badge-savings">Save 2 months</span></span>
+      </div>
       <div class="pricing-grid">
-        <div class="pricing-card">
+        <div class="pricing-card"
+             data-monthly-price="97" data-annual-price="970"
+             data-monthly-url="https://webhook.northernautomation.ca/webhook/checkout?plan=starter-monthly"
+             data-annual-url="https://webhook.northernautomation.ca/webhook/checkout?plan=starter-annual">
           <div class="badge-trial">14-Day Free Trial</div>
           <h3>Starter</h3>
-          <div class="price"><sup>$</sup>97</div>
-          <div class="price-period">CAD / month</div>
-          <div class="price-annual">or <strong>$970/year</strong> <span class="badge-savings">Save 2 months</span></div>
+          <div class="price"><sup>$</sup><span class="price-val">97</span></div>
+          <div class="price-period"><span class="price-period-val">CAD / month</span></div>
+          <div class="price-annual-note">&nbsp;</div>
           <div class="price-volume">Up to 75 calls/month</div>
           <ul class="pricing-features">
             <li>AI receptionist answers every call 24/7</li>
@@ -258,13 +269,16 @@
           <div class="price-overage">$0.50/call over 75</div>
           <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=starter-monthly" class="btn-cta-outline" data-plausible-event-name="CTA Click">Get Started Free</a>
         </div>
-        <div class="pricing-card featured">
+        <div class="pricing-card featured"
+             data-monthly-price="197" data-annual-price="1,997"
+             data-monthly-url="https://webhook.northernautomation.ca/webhook/checkout?plan=growth-monthly"
+             data-annual-url="https://webhook.northernautomation.ca/webhook/checkout?plan=growth-annual">
           <div class="badge-popular">Most Popular</div>
           <div class="badge-trial">14-Day Free Trial</div>
           <h3>Growth</h3>
-          <div class="price"><sup>$</sup>197</div>
-          <div class="price-period">CAD / month</div>
-          <div class="price-annual">or <strong>$1,997/year</strong> <span class="badge-savings">Save 2 months</span></div>
+          <div class="price"><sup>$</sup><span class="price-val">197</span></div>
+          <div class="price-period"><span class="price-period-val">CAD / month</span></div>
+          <div class="price-annual-note">&nbsp;</div>
           <div class="price-volume">Up to 300 calls/month</div>
           <ul class="pricing-features">
             <li>AI receptionist answers every call 24/7</li>
@@ -277,12 +291,15 @@
           <div class="price-overage">$0.50/call over 300</div>
           <a href="https://webhook.northernautomation.ca/webhook/checkout?plan=growth-monthly" class="btn-cta" data-plausible-event-name="CTA Click">Get Started Free</a>
         </div>
-        <div class="pricing-card">
+        <div class="pricing-card"
+             data-monthly-price="397" data-annual-price="3,997"
+             data-monthly-url="https://webhook.northernautomation.ca/webhook/checkout?plan=pro-monthly"
+             data-annual-url="https://webhook.northernautomation.ca/webhook/checkout?plan=pro-annual">
           <div class="badge-trial">14-Day Free Trial</div>
           <h3>Pro</h3>
-          <div class="price"><sup>$</sup>397</div>
-          <div class="price-period">CAD / month</div>
-          <div class="price-annual">or <strong>$3,997/year</strong> <span class="badge-savings">Save 2 months</span></div>
+          <div class="price"><sup>$</sup><span class="price-val">397</span></div>
+          <div class="price-period"><span class="price-period-val">CAD / month</span></div>
+          <div class="price-annual-note">&nbsp;</div>
           <div class="price-volume">Unlimited calls</div>
           <ul class="pricing-features">
             <li>Everything in Growth</li>
@@ -296,6 +313,19 @@
         </div>
       </div>
       <p class="pricing-note">No setup fees. No contracts. Cancel anytime. Overages billed at $0.50/call.</p>
+      <script>
+      function setPricingToggle(isAnnual) {
+        document.querySelectorAll('.pricing-card[data-monthly-price]').forEach(function(card) {
+          card.querySelector('.price-val').textContent = isAnnual ? card.dataset.annualPrice : card.dataset.monthlyPrice;
+          card.querySelector('.price-period-val').textContent = isAnnual ? 'CAD / year' : 'CAD / month';
+          card.querySelector('.price-annual-note').innerHTML = isAnnual ? '<span class="badge-savings">Billed annually</span>' : '&nbsp;';
+          var btn = card.querySelector('a[data-plausible-event-name]');
+          btn.href = isAnnual ? card.dataset.annualUrl : card.dataset.monthlyUrl;
+        });
+        document.getElementById('toggle-label-monthly').classList.toggle('active-label', !isAnnual);
+        document.getElementById('toggle-label-annual').classList.toggle('active-label', isAnnual);
+      }
+      </script>
     </div>
   </section>
 
